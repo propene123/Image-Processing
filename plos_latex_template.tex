@@ -68,6 +68,7 @@
 
 
 \usepackage{lastpage,fancyhdr,graphicx}
+\graphicspath{ {./paperImages/} }
 \usepackage{epstopdf}
 
 \pagestyle{fancy}
@@ -104,8 +105,20 @@ In this formula $h$ serves as an adjustable parameter to change the filtering of
 For the algorithm to be sensibly implemented the above formula must be reformulated into a discrete algorithm. Examples of these are discussed below.
 
 \section*{Algorithm Implementations}
-\paragraph{Pixelwise Implementation}
-The first discrete implementation I will be discussing is the Pixelwise Implementation. This implementation is the most 
+\paragraph{Pixelwise Implementation:}
+The first discrete implementation I will be discussing is the Pixelwise Implementation. This implementation is the most faithful to the original formula given for the algorithm since it calculates the denoised value for a pixel $p$ one pixel at a time. The algorithm proposed in \cite{paper2} is as follows.
+$u = (u_{1}, u_{2}, u_{3})$ is a colour image, if a pixel $p$ is selected its new value is given by
+$$\mathit{\hat{u_{i}}(p) = \frac{1}{C(p)} \sum_{q\in B(p,r)}^{}u_{i}(q)w(p,q)}\text{,    }\mathit{C(p)=\sum_{q\in B(p,r)}^{}w(p,q)},$$
+where $i$ = 1, 2, 3 and $B(q,r)$ is a neighbourhood centered on pixel $p$ with size $\mathit{(2r+1)\times (2r+1)}$. $r$ is used to restrict the neighbourhood size depending on the standard deviation of the noise in the image so that the algorithm performs in a reasonable amount of time. $w(p,1)$ is the weight for the average and is dependant on the squared Euclidean distance between 2 neighbourhoods $B(p,f)$ and $B(q,f)$ the result is given by 
+\includegraphics{weighted}
+the weight $w(p,q)$ is then given by the formula
+\begin{figure}
+\centering
+\includegraphics{w}
+\end{figure}
+$h$ is the filtering parameter discussed in \cite{paper1} This formula gives higher weightings to more similar patches. Setting patches with a distance less than twice the variance of the noise to 1 and all other patches to rapidly decreasing values less than 1. $p$ is set to the largest of the weights in $B(P,r)$ so that it is not unfairly weighted in the average. Every pixel in $u$ is passed into this algorithm and the resulting pixels form the denoised image.
+\paragraph{Patchwise Implementation}
+
 \begin{thebibliography}{9}
 \bibitem{paper1}
 Antoni Buades, and Jean-Michel Morel.
