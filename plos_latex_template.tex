@@ -1,10 +1,11 @@
 
 \documentclass[11pt,letterpaper]{article}
-\usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
+\usepackage[top=0.85in,margin=0.25in,footskip=0.75in]{geometry}
 
 
 \usepackage{amsmath,amssymb}
 
+\usepackage{float}
 
 \usepackage{changepage}
 
@@ -53,7 +54,7 @@
 
 \raggedright
 \setlength{\parindent}{0.5cm}
-\textwidth 5.25in 
+%\textwidth 5.25in 
 \textheight 8.75in
 
 
@@ -71,7 +72,7 @@
 \graphicspath{ {./paperImages/} }
 \usepackage{epstopdf}
 
-\pagestyle{fancy}
+\pagestyle{plain}
 \fancyhf{}
 
 \rfoot{\thepage}
@@ -107,17 +108,40 @@ For the algorithm to be sensibly implemented the above formula must be reformula
 \section*{Algorithm Implementations}
 \paragraph{Pixelwise Implementation:}
 The first discrete implementation I will be discussing is the Pixelwise Implementation. This implementation is the most faithful to the original formula given for the algorithm since it calculates the denoised value for a pixel $p$ one pixel at a time. The algorithm proposed in \cite{paper2} is as follows.
-$u = (u_{1}, u_{2}, u_{3})$ is a colour image, if a pixel $p$ is selected its new value is given by
-$$\mathit{\hat{u_{i}}(p) = \frac{1}{C(p)} \sum_{q\in B(p,r)}^{}u_{i}(q)w(p,q)}\text{,    }\mathit{C(p)=\sum_{q\in B(p,r)}^{}w(p,q)},$$
-where $i$ = 1, 2, 3 and $B(q,r)$ is a neighbourhood centered on pixel $p$ with size $\mathit{(2r+1)\times (2r+1)}$. $r$ is used to restrict the neighbourhood size depending on the standard deviation of the noise in the image so that the algorithm performs in a reasonable amount of time. $w(p,1)$ is the weight for the average and is dependant on the squared Euclidean distance between 2 neighbourhoods $B(p,f)$ and $B(q,f)$ the result is given by 
-\includegraphics{weighted}
-the weight $w(p,q)$ is then given by the formula
-\begin{figure}
+$u = (u_{1}, u_{2}, u_{3})$ is a colour image, if a pixel $p$ is selected its new value is calculated by first selecting pixels $q$ in a large search area centered on $p$, this must be bounded though to ensure an acceptable runtime. Patches of a fixed size centered around $p$ and $q$ are then compared by taking the squared Euclidean distance between them, the shorter the distance the more similar they are. This distance is then used with an exponential kernel and a normalising constant to produce the weight associated with pixel $q$. Once this has been done for all pixels in the search space around $p$ the new value for $p$ is calculated as the weighted average of the pixels $q$. After this has been repeated for all pixels $p$ in the image the new values for $p$ can be combined to form the denoised image.
+\paragraph{Patchwise Implementation:}
+The patchwise implementation denoises the image in patches rather than 1 pixel at a time. Its implementation according to \cite{paper2} is as follows.
+The algorithm takes image $u=(u_{1},u_{2},u_{3})$ and a patch $B(p,f)$ centered around $p$ and of size $\mathit{(2f+1)\times (2f+1)}$. This patch is then compared to patches centered around pixels $q$, located in a large search area around $p$, in the same way as they are compared in the pixelwise implementation. The difference is that in the patchwise implementation the weighted average of these patch distances are used to calculate the new value of every $p$ in the patch $B(p,f)$. This saves time as less patches are compared overall.
+\paragraph{Comparison:}
+Pixelwise is the easier of the 2 implementations discussed in\cite{paper2} to implement. However it is less efficient as it recalculates the weight of multiple patches each time they are used for a pixel. On the other hand patchwise calculates these weights and then uses them on all the pixels in a particular patch straight away rather than having to calculate them again later.It is mentioned in\cite{paper2} that another advantage of patchwise is the higher gain in peak signal-to-noise ratio and fewer noise oscillations at edges in the image. It is worth noting that although patchwise is more efficient it offers no improvement for preserving details in the image than pixelwise\cite{paper2}. 
+\section*{Effect of Paramters on Non-Local Means}
+Adjusting the value of $h$ had a significant effect on the denoising of the image as can be seen below.
+\begin{figure}[H]
 \centering
-\includegraphics{w}
+\includegraphics{combined}
+\caption{Top to bottom left to right: original, noisy, h=3, h=5, h=7, h=15}
 \end{figure}
-$h$ is the filtering parameter discussed in \cite{paper1} This formula gives higher weightings to more similar patches. Setting patches with a distance less than twice the variance of the noise to 1 and all other patches to rapidly decreasing values less than 1. $p$ is set to the largest of the weights in $B(P,r)$ so that it is not unfairly weighted in the average. Every pixel in $u$ is passed into this algorithm and the resulting pixels form the denoised image.
-\paragraph{Patchwise Implementation}
+As can be seen as h is increased the denoising effect becomes more pronounced. However as h grows higher more and more features and details in the image are lost as a cost to gain greater denoising.
+Varying the size of the template window(tw) (size of the patch compared with the neighbourhood of $p$) reduces noise in similar parts of the image but does so at the cost of smoothing the edges between those parts of the image causing a loss in texture. This can be seen below
+\begin{figure}[H]
+\centering
+\includegraphics[height=5.9cm]{combineda}
+\caption{Top to bottom left to right: original, noisy, tw=3, tw=7, tw=15, tw=21}
+\end{figure}
+Varying the size of the search window around $p$ had little to no effect on the result of denoising the image. With the exception of periodic images where a larger size gives much better results\cite{paper6}.
+
+\section*{Comparison to other algorithms}
+When compared to other denoising algorithms Non-local means performs very favourably. A comparison is carried out in\cite{paper3}. This comparison found that when compared to algorithms like Gaussian filter, Non-Local means maintains the structure of the original image far better keeping more details and features like hard edges.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{combinedd}
+\caption{Left to right: original, noisy, Non-Local Means, Gaussian Filter}
+\end{figure}
+The above shows a blurring of edges when Gaussian filter is used instead of Non-Local means as well as worse denoising in the flat zones of the image.
+The comparison\cite{paper3} also found that a major strength of Non-Local means is its ability to denoise periodic images without losing the periodic pattern. The runtime for Non-Local means is a problem compared to other algorithms for denoising as found in\cite{paper4} when it was compared to median filters. Non-Local means can also produce adhesion artefacts\cite{paper5}, this paper describes how if a pixel in a flat zone (area of similar valued pixels) is near a hard edge it will dominate the value of pixels on the other side of the edge creating an artifact. Non-Linear means tendency to over smooth textured parts of an image is also described in \cite{paper5} although this weakness can be reduced by taking an average of the denoised image and the noisy image at the end of the process to restore texture\cite{paper5}.
+
+\section*{Extensions to Non-Local Means}
+\paragraph{Gaussian Filter:}
 
 \begin{thebibliography}{9}
 \bibitem{paper1}
@@ -126,10 +150,34 @@ Antoni Buades, and Jean-Michel Morel.
 In Proceedings of the 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05) - Volume 2 - Volume 02 (CVPR ’05). IEEE Computer Society, USA, 60–65.
 
 \bibitem{paper2}
-Antoni Buades, Bartomeu Coll, and Jean-Michel Morel
+Antoni Buades, Bartomeu Coll, and Jean-Michel Morel.
 \textit{Non-Local Means Denoising}.
 Image Processing Online.
 
+\bibitem{paper3}
+Antoni Buades, Bartomeu Coll, and Jean-Michel Morel.
+\textit{On image denoising methods}.
+CMLA Preprint.
+
+\bibitem{paper4}
+Subhojit Sarker, Shalini Chowdhury, Samanwita Laha and Debika Dey.
+\textit{USE OF NON-LOCAL MEANS FILTER TO DENOISE IMAGE CORRUPTED BY SALT AND PEPPER NOISE}.
+Signal \& Image Processing : An International Journal (SIPIJ) Vol.3, No.2, April 2012 .
+
+\bibitem{paper5}
+Coll, Bartomeu \& Morel, Jean-Michel.
+\textit{Image and movie denoising by nonlocal means}. International Journal of Computer Vision - IJCV. 
+
+\bibitem{paper6}
+Salmon, J.
+\textit{On Two Parameters for Denoising With Non-Local Means}.
+IEEE Signal Processing Letters
+
+\bibitem{paper7}
+Sachin Chachada, Byung Tae Oh, Namgook Cho, San A. Phong, Daniel Manchala and C.-C.Jay Kuo.
+\textit{Extension of Non-Local Means (NLM) Algorithm with
+	Gaussian Filtering for Highly Noisy Images}.
+2011 Visual Communications and Image Processing (VCIP), Tainan, 2011, pp. 1-4.
 
 \end{thebibliography}
 

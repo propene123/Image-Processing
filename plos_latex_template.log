@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.10)  16 JAN 2020 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.10)  16 JAN 2020 22:18
 entering extended mode
 **./plos_latex_template.tex
 (plos_latex_template.tex
@@ -123,17 +123,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
+)) ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count103
+\float@exts=\toks21
+\float@box=\box28
+\@float@everytoks=\toks22
+\@floatcapt=\box29
+)
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\changepage\changepag
 e.sty"
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count103
-\cp@tempcnt=\count104
+\c@cp@cntr=\count104
+\cp@tempcnt=\count105
 )
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks21
-\inpenc@posthook=\toks22
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
 
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
@@ -144,10 +151,10 @@ Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
-\uc@secondtry=\count105
-\uc@combtoks=\toks23
-\uc@combtoksb=\toks24
-\uc@temptokena=\toks25
+\uc@secondtry=\count106
+\uc@combtoks=\toks25
+\uc@combtoksb=\toks26
+\uc@temptokena=\toks27
 ) ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
@@ -274,7 +281,7 @@ sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )))))
-\c@section@level=\count106
+\c@section@level=\count107
 LaTeX Info: Redefining \ref on input line 355.
 LaTeX Info: Redefining \pageref on input line 355.
 )
@@ -327,13 +334,13 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen120
-\Hy@linkcounter=\count107
-\Hy@pagecounter=\count108
+\Hy@linkcounter=\count108
+\Hy@pagecounter=\count109
 
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count109
+\Hy@SavedSpaceFactor=\count110
 
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cf
 g"
@@ -346,14 +353,14 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count110
+\c@Hy@tempcnt=\count111
  ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen121
-\Fld@menulength=\count111
+\Fld@menulength=\count112
 \Field@Width=\dimen122
 \Fld@charsize=\dimen123
 Package hyperref Info: Hyper figures OFF on input line 6380.
@@ -365,17 +372,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count112
-\c@Item=\count113
-\c@Hfootnote=\count114
+\Hy@abspage=\count113
+\c@Item=\count114
+\c@Hfootnote=\count115
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
 "
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count115
-\c@bookmark@seq@number=\count116
+\Fld@listcount=\count116
+\c@bookmark@seq@number=\count117
 
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilech
 eck.sty"
@@ -387,31 +394,31 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lineno\lineno.sty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count117
-\output=\toks26
-\linenoprevgraf=\count118
+\linenopenalty=\count118
+\output=\toks28
+\linenoprevgraf=\count119
 \linenumbersep=\dimen124
 \linenumberwidth=\dimen125
-\c@linenumber=\count119
-\c@pagewiselinenumber=\count120
-\c@LN@truepage=\count121
-\c@internallinenumber=\count122
-\c@internallinenumbers=\count123
+\c@linenumber=\count120
+\c@pagewiselinenumber=\count121
+\c@LN@truepage=\count122
+\c@internallinenumber=\count123
+\c@internallinenumbers=\count124
 \quotelinenumbersep=\dimen126
 \bframerule=\dimen127
 \bframesep=\dimen128
-\bframebox=\box28
+\bframebox=\box30
 LaTeX Info: Redefining \\ on input line 3056.
 )
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype.
 sty"
 Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
-\MT@toks=\toks27
-\MT@count=\count124
+\MT@toks=\toks29
+\MT@count=\count125
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen129
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count125
+\MT@listname@count=\count126
 
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtype-
 pdftex.def"
@@ -446,17 +453,17 @@ Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
  ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen130
-\ar@mcellbox=\box29
+\ar@mcellbox=\box31
 \extrarowheight=\dimen131
-\NC@list=\toks28
+\NC@list=\toks30
 \extratabsurround=\skip48
 \backup@length=\skip49
-\ar@cellbox=\box30
+\ar@cellbox=\box32
 )
-\everycr=\toks29
+\everycr=\toks31
 \minrowclearance=\skip50
 )
-\rownum=\count126
+\rownum=\count127
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -483,8 +490,9 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen137
 \caption@hangindent=\dimen138
 )
-\c@caption@flags=\count127
-\c@ContinuedFloat=\count128
+\c@caption@flags=\count128
+\c@ContinuedFloat=\count129
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lastpage\lastpage.st
@@ -544,27 +552,27 @@ G,.JBIG2,.JB2,.eps]
 )) (plos_latex_template.aux)
 \openout1 = `plos_latex_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
 
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -574,15 +582,15 @@ LaTeX Font Info:    ... okay on input line 84.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(198.7425pt, 323.40732pt, 92.14519pt)
-* v-part:(T,H,B)=(61.42993pt, 638.14268pt, 95.39737pt)
+* h-part:(L,W,R)=(18.06749pt, 578.16002pt, 18.06749pt)
+* v-part:(T,H,B)=(18.06749pt, 758.835pt, 18.06749pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=379.4175pt
+* \textwidth=578.16002pt
 * \textheight=632.36249pt
-* \oddsidemargin=126.4725pt
-* \evensidemargin=126.4725pt
-* \topmargin=-47.84006pt
+* \oddsidemargin=-54.2025pt
+* \evensidemargin=-54.2025pt
+* \topmargin=-91.2025pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -603,17 +611,17 @@ LaTeX Font Info:    ... okay on input line 84.
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 84.
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 85.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 
 (plos_latex_template.out) (plos_latex_template.out)
 \@outlinefile=\write3
 \openout3 = `plos_latex_template.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 84.
+LaTeX Info: Redefining \microtypecontext on input line 85.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -632,23 +640,23 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
 "
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
+\scratchcounter=\count130
 \scratchdimen=\dimen141
-\scratchbox=\box32
-\nofMPsegments=\count130
-\nofMParguments=\count131
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count132
+\scratchbox=\box34
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count133
 \MPscratchDim=\dimen142
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks33
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 84.
+(lastpage)             ! on input line 85.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -657,13 +665,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 \\
+l.94 \\
        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -671,78 +679,76 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 "
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
  ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\mt-msb.cfg
 "
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-<./paperImages/weighted.png, id=5, 406.01688pt x 49.68562pt>
-File: ./paperImages/weighted.png Graphic file (type png)
-<use ./paperImages/weighted.png>
-Package pdftex.def Info: ./paperImages/weighted.png  used on input line 113.
-(pdftex.def)             Requested size: 406.01587pt x 49.6855pt.
-<./paperImages/w.png, id=7, 150.31157pt x 31.86906pt>
-File: ./paperImages/w.png Graphic file (type png)
-<use ./paperImages/w.png>
-Package pdftex.def Info: ./paperImages/w.png  used on input line 117.
-(pdftex.def)             Requested size: 150.31119pt x 31.86897pt.
+) [1
 
-Overfull \hbox (26.59837pt too wide) in paragraph at lines 111--120
-[] 
- []
+{C:/Users/Ben/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<./paperImages/combined.png, id=36, 508.7808pt x 225.9642pt>
+File: ./paperImages/combined.png Graphic file (type png)
+<use ./paperImages/combined.png>
+Package pdftex.def Info: ./paperImages/combined.png  used on input line 121.
+(pdftex.def)             Requested size: 508.77956pt x 225.96364pt.
+<./paperImages/combineda.png, id=38, 559.3698pt x 249.5724pt>
+File: ./paperImages/combineda.png Graphic file (type png)
+<use ./paperImages/combineda.png>
+Package pdftex.def Info: ./paperImages/combineda.png  used on input line 128.
+(pdftex.def)             Requested size: 376.26096pt x 167.87108pt.
+ [2 <./paperImages/combined.png> <./paperImages/combineda.png>]
+<./paperImages/combinedd.png, id=50, 678.3744pt x 112.9821pt>
+File: ./paperImages/combinedd.png Graphic file (type png)
+<use ./paperImages/combinedd.png>
+Package pdftex.def Info: ./paperImages/combinedd.png  used on input line 137.
+(pdftex.def)             Requested size: 578.16002pt x 96.299pt.
 
-[1
-
-{C:/Users/Ben/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./paperImages
-/weighted.png>]
 ("C:\Users\Ben\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-
+[3 <./paperImages/combinedd.png>] 
 AED: lastpage setting LastPage
-[2 <./paperImages/w.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
  (plos_latex_template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
 Package rerunfilecheck Info: File `plos_latex_template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
  ) 
 Here is how much of TeX's memory you used:
- 11217 strings out of 492969
- 172702 string characters out of 3127473
- 311255 words of memory out of 3000000
- 14892 multiletter control sequences out of 15000+200000
- 10770 words of font info for 46 fonts, out of 3000000 for 9000
+ 11304 strings out of 492969
+ 173910 string characters out of 3127473
+ 311751 words of memory out of 3000000
+ 14948 multiletter control sequences out of 15000+200000
+ 11247 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,43p,513b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,7n,43p,879b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmbx10.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ben/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ben/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Ben
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ben
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
 /Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ben/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ben/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Be
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C
-:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-ti8.pfb>
-Output written on plos_latex_template.pdf (2 pages, 215904 bytes).
+6.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Ben/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Ben/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Ben/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/Be
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on plos_latex_template.pdf (4 pages, 12369505 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 7691 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 128 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 7696 words of extra memory for PDF output out of 10000 (max. 10000000)
 
