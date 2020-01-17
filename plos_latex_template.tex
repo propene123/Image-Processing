@@ -142,7 +142,11 @@ The comparison\cite{paper3} also found that a major strength of Non-Local means 
 
 \section*{Extensions to Non-Local Means}
 \paragraph{Gaussian Filter:}
-
+Since the performance of Non-Local means is dependant on the variance of the noise \cite{paper7} a pre-processed image that has a lower noise variance will perform better in Non-Local means. Therefore an extension proposed in \cite{paper7} is called Enhanced-Weights NLM. This is a very simple extension to NLM and is performed by first passing the image into a Gaussian filter in order to reduce the variance of the noise. Then the image is put into NLM producing the denoised image. Downsides to this algorithm include the weaknesses of Gaussian Blur as it introduces blurring in textured regions of the image as wel as blurring at hard edges\cite{paper7}. Experimental results in the paper showed that for a variance greater than 20 EWNLM always had greater peak signal-to-noise ratio and higher perceived quality\cite{paper7}.
+\paragraph{Fast Fourier Transform:}
+This extension to NLM does not attempt to produce higher quality results but instead it aims to produce comparable results in less time. To do this it exploits the fact that the slowest part of NLM is calculating the Euclidean distances\cite{paper8}. This process can be replaced with a Fast Fourier Transform instead. This produces a speed increase of approximately 50 times and only a slight increase in mean squared error\cite{paper8}.
+\section*{Applications of Non-Local means}
+Non-Local means has many applications in medicine one such application is denoising images produced from low-dose X-ray\cite{paper9}. This is done to avoid unnecessary exposure to high amounts of radiation. Non-Local means can also be used to denoise brain segmentations\cite{paper10}. In this study it was found that a variation of NLM called ORNLM was the most effective variation of NLM as it produced denoised images that were the closest to the actual structure of the brain\cite{paper10}. NLM can also be applied to video de-interlacing. An algorithm is described in\cite{paper11} in which 2 interlaced frames are initially de-interlaced using a basic algorithm in order to first predict what the interlaced pixels should look like. Then NLM is run on the pixel being de-interlaced. This algorithm provides a distinct advantage over other de-interlacing algorithms as by using NLM it is not necessary to implement compensation for motion between the 2 frames in the algorithm as NLM removes the combing artifact that would normally be seen as a result of motion\cite{paper11}.
 \begin{thebibliography}{9}
 \bibitem{paper1}
 Antoni Buades, and Jean-Michel Morel.
@@ -178,6 +182,26 @@ Sachin Chachada, Byung Tae Oh, Namgook Cho, San A. Phong, Daniel Manchala and C.
 \textit{Extension of Non-Local Means (NLM) Algorithm with
 	Gaussian Filtering for Highly Noisy Images}.
 2011 Visual Communications and Image Processing (VCIP), Tainan, 2011, pp. 1-4.
+
+\bibitem{paper8}
+Jin Wang, Yanwen Guo,  Yiting Ying, Yanli Liu, Qunsheng Peng.
+\textit{Fast Non-Local Algorithm for Image Denoising}.
+2006 International Conference on Image Processing, October 2006, pp.1429-1432
+
+\bibitem{paper9}
+Hao Zhang, Dong Zeng, Hua Zhang, Jing Wang, Zhengrong Liang, and Jianhua Ma.
+\textit{Applications of nonlocal means algorithm in low-dose X-ray CT image processing and reconstruction: a review}.
+Med Phys. 2017 Mar.
+
+\bibitem{paper10}
+Christian Gaser, and Pierrick Coupe
+\textit{An Application of Non-Local Means Filter to Denoise Brain Segmentations}.
+http://dbm.neuro.uni-jena.de/Gaser-HBM2010.pdf.
+
+\bibitem{paper11}
+Roozbeh Dehghannasiri, and Shahram Shirani.
+\textit{A novel de-interlacing method based on locally-adaptive Nonlocal-means}.
+2012 Conference Record of the Forty Sixth Asilomar Conference on Signals, Systems and Computers (ASILOMAR), Pacific Grove, CA, 2012, pp. 1708-1712.
 
 \end{thebibliography}
 
